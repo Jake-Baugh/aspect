@@ -1,4 +1,23 @@
+/*====== Site Styling ======*/
 
+.navbar {
+  border-bottom: 1px solid #eaebed;
+}
+
+.navbar-brand img {
+  width: 40px;
+}
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+.card-body {
+  padding: 1.875rem;
+  min-height: 350px;
+}
+
+/*====== Ken Burns ========*/
 
 /* Loaded body */
 body.loaded {
@@ -48,20 +67,3 @@ body.loaded {
     transform: scale(1);
     transition: 8.5s transform;
   }
-  
-  .card-body {
-    padding: 1.875rem;
-    min-height: 350px;
-}
-
-.bg-light {
-    background-color: #fff !important;
-}
-
-.navbar {
-    border-bottom: 1px solid #eaebed;
-}
-
-.navbar-brand img {
-    width: 40px;
-}
