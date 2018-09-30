@@ -17,6 +17,11 @@
   min-height: 350px;
 }
 
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /*====== Ken Burns ========*/
 
 /* Loaded body */
