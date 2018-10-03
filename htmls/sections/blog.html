@@ -1,0 +1,26 @@
+
+  <!-- Our Blog Section -->
+  <div class="blog section section-invert py-4">
+    <h3 class="section-title text-center m-5">Latest Posts</h3>
+
+    <div class="container">
+      <div class="py-4">
+        <div class="row">
+          <div class="card-deck">
+            <cms:pages masterpage='pages.php' paginate='1' limit='3' >
+            <div class="col-md-12 col-lg-4">
+              <div class="card mb-4">
+                <img class="card-img-top" src="<cms:show page_image />" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"><cms:show k_page_title /></h4>
+                  <p class="card-text"><cms:excerpt count='25' ><cms:show page_content /></cms:excerpt></p>
+                  <a class="btn btn-primary btn-pill" href="#">Read More &rarr;</a>
+                </div>
+              </div>
+            </div>
+            </cms:pages>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

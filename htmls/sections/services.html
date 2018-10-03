@@ -1,0 +1,27 @@
+
+  <!-- Our Services Section -->
+  <div id="our-services" class="our-services section py-4">
+    <h3 class="section-title text-center my-5">Our Services</h3>
+    <!-- Features -->
+    <div class="features py-4 mb-4">
+      <div class="container">
+      <cms:pages masterpage='tmpl_svc.php' >
+      <cms:set num = "<cms:mod k_count '2'/>"/>
+      <cms:if num == '1'>
+        <div class="row">
+      </cms:if >
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fa fa-<cms:show svc_icon_name />"></i></div>
+            <div class="px-4">
+              <h5><cms:show k_page_title /></h5>
+              <p><cms:show svc_desc /></p>
+            </div>
+          </div>
+      <cms:if num == '0'>
+        </div>
+      </cms:if >
+      </cms:pages >
+      </div>
+    </div>
+    <!-- / Features -->
+  </div>

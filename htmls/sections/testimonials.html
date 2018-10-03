@@ -1,0 +1,32 @@
+  <!-- Testimonials Section -->
+  <div class="testimonials section py-4">
+    <h3 class="section-title text-center m-5"><cms:get_global 'tsti_title' masterpage='tmpl_tsti.php' /></h3>
+    <div class="container py-5">
+      <cms:pages masterpage='tmpl_tsti.php' >
+      <cms:set num = "<cms:mod k_count '3'/>"/>
+      <cms:if num == '1'>
+      <div class="row">
+      </cms:if >
+        <div class="col-md-4 testimonial text-center">
+          <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+            <img src="<cms:show tsti_image />" class="w-100" alt="Testimonial Avatar" />
+          </div>
+          <h5 class="mb-1"><cms:show k_page_title /></h5>
+          <span class="text-muted d-block mb-2"><cms:show tsti_role /></span>
+          <p><cms:show tsti_desc /></p>
+        
+          <div class="icon text-primary text-center mb-5">
+            <cms:repeat count=tsti_stars >
+            <i class="fa fa-star"></i>
+            </cms:repeat >
+          </div>
+       
+        </div>
+
+      <cms:if num == '0'>
+      </div>
+      </cms:if >
+      </cms:pages >
+    </div>
+  </div>
+  <!-- / Testimonials Section -->

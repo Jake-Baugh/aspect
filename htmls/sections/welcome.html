@@ -1,0 +1,21 @@
+  <!-- / Welcome Section -->
+
+  <section class="section section-invert">
+    <div class="container">
+      <div class="py-4">
+        <h3 class="section-title text-center my-5"><cms:get_custom_field 'welcome_title' masterpage='tmpl_welcome.php' /></h3>
+      <div class="row py-5">
+        <div class="col-md-6 mb-4">
+            <div class="card text-white">
+              <img class="card-img" src="<cms:get_custom_field 'welcome_image' masterpage='tmpl_welcome.php' />" alt="Card image">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 pl-4 my-auto">
+            <cms:get_custom_field 'welcome_text' masterpage='tmpl_welcome.php' />
+          </div>
+      </div>
+    </div>
+    </div>
+  </section>
