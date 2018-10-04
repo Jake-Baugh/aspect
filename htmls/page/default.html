@@ -1,0 +1,49 @@
+
+  <!-- Portfolio -->
+  <section class="content-section bg-white" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <!-- Latest Posts -->
+        <main class="post blog-post col-lg-8 pt-0 pr-5"> 
+          <div class="container">
+              <div class="post-single">
+                <div class="mb-4 post-thumbnail"><img src="<cms:show page_image />" alt="..." class="img-fluid"></div>
+                <div class="post-details">
+                    <h1><cms:show k_page_title /><a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
+                    <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><div class="author d-flex align-items-center flex-wrap">
+      
+                        <div class="d-flex align-items-center flex-wrap">
+                          <div class="blog-title"><span><cms:show page_author /></span></div>
+                        </div>
+                      <div class="date"></div>
+                      <div class="comments meta-last"></i><cms:show k_page_date /></div>
+                    </div>
+                  </div>
+                <div class="post-body">
+                  <cms:show page_content />
+                </div>
+                <div class="posts-nav">
+                  <cms:pages start_on=k_page_date order='asc' limit='1' offset='1'>
+                  <a href="<cms:show k_page_link />" class="prev-post col-6">
+                    <div class="icon prev"><i class="fa fa-angle-left"></i></div>
+                    <div class="text"><strong class="text-primary">Previous Post </strong>
+                      <h6 class="d-none d-sm-block"><cms:show k_page_title /></h6>
+                    </div>
+                  </a>
+                  </cms:pages >
+                  <cms:pages stop_before=k_page_date limit='1'>
+                  <a href="<cms:show k_page_link />" class="next-post col-6">
+                    <div class="text"><strong class="text-primary">Next Post </strong>
+                      <h6 class="d-none d-sm-block"><cms:show k_page_title /></h6>
+                    </div>
+                    <div class="icon next"><i class="fa fa-angle-right">   </i></div>
+                  </a>
+                  </cms:pages >
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>

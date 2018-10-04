@@ -6,6 +6,19 @@
    
 </cms:template>
 
-<cms:smart_embed />
-
+<cms:set my_debug='0' />
+<cms:smart_embed debug=my_debug 'afore' />
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <cms:smart_embed debug=my_debug 'headers' />
+    <cms:smart_embed debug=my_debug 'menu' />
+<body class="home-page">
+    <cms:if k_is_page >
+      <cms:smart_embed debug=my_debug 'page' />
+    <cms:else />
+      <cms:smart_embed debug=my_debug 'list' />
+    </cms:if >
+    <cms:smart_embed debug=my_debug 'footer' />
+</body>
+</html>
 <?php COUCH::invoke(); ?>
